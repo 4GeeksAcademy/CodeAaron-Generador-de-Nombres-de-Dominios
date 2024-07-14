@@ -1,1 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+#contenedor-boton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
