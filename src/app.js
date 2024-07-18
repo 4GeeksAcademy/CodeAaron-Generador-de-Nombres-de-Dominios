@@ -1,31 +1,28 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  document.querySelector("#excuse").innerHTML = generateUrl();
+  document.querySelector("#excuse").innerHTML = generateDomain();
 };
 
-const generateUrl = () => {
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let ext = [".com", ".net", ".us", ".io", "etc."];
+const generateDomain = () => {
+  let pronouns = ["the", "our"];
+  let adjs = ["great", "big"];
+  let nouns = ["jogger", "racoon"];
+  let extencions = [".com", ".net", ".us", ".io", ".etc"];
+  let spacing = "<br>";
 
-  let Url = "";
-  pronoun.forEach(p => {
-    adj.forEach(a => {
-      noun.forEach(n => {
-        ext.forEach(e => {
-          Url += p + a + n + e + "<br>";
+  let domain = "";
+
+  pronouns.forEach(pronoun => {
+    adjs.forEach(adj => {
+      nouns.forEach(noun => {
+        extencions.forEach(extencion => {
+          domain += pronoun + adj + noun + extencion + spacing;
         });
       });
     });
   });
 
-  return Url;
+  return domain;
 };
